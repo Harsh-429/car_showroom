@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello! 👋 Welcome to our Car Showroom</h1>
+        <p>I'm your assistant here to help you find the perfect car. 🚗</p>
+        
+        <div id="carSelection">
+            <label for="carType">Select a car type:</label>
+            <select id="carType">
+                <option value="">--Choose a type--</option>
+                <option value="family cars">Family Cars</option>
+                <option value="off roading cars">Off Roading Cars</option>
+                <option value="suv">SUV</option>
+                <option value="sports cars">Sports Cars</option>
+                <option value="electric cars">Electric Cars</option>
+            </select>
+            <button onclick="getCarOptions()">Show Options</button>
+        </div>
+
+        <div id="carList"></div>
+        <div id="carDetails"></div>
+
+        <div id="emiSection" style="display: none;">
+            <h3>EMI Calculation</h3>
+            <label for="rate">Enter interest rate (%):</label>
+            <input type="number" id="rate" placeholder="Interest rate">
+            <label for="years">Enter the number of years:</label>
+            <input type="number" id="years" placeholder="Loan term (years)">
+            <button onclick="calculateEMI()">Calculate EMI</button>
+            <div id="emiResult"></div>
+        </div>
+
+        <button id="exit" onclick="exitApp()" style="display: none;">Exit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
